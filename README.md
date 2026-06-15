@@ -10,6 +10,7 @@
 
 - [功能实现说明](docs/FUNCTIONS.md)
 - [使用说明](docs/USAGE.md)
+- [从 GitHub 下载与使用](docs/INSTALL_FROM_GIT.md)
 - [实机信息提供清单](docs/REQUIRED_INFORMATION.md)
 
 ## 快速验证
