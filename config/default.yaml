@@ -1,0 +1,110 @@
+runtime:
+  mode: dry_run               # dry_run | native | macro_hotkey
+  game_window_title: "Diablo IV"
+  tick_seconds: 0.15
+  enable_hotkey: "f8"
+  pause_hotkey: "f9"
+  boss_summon_hotkey: "f7"
+  emergency_stop_hotkey: "f12"
+  screenshot_on_transition: true
+
+capture:
+  monitor: 1
+  reference_width: 1920
+  reference_height: 1080
+
+vision:
+  # Normalized [left, top, right, bottom] regions. Calibrate before native mode.
+  health_region: [0.028, 0.790, 0.115, 0.965]
+  inventory_region: [0.615, 0.150, 0.965, 0.885]
+  inventory_slots_region: [0.665, 0.455, 0.948, 0.805]
+  nearby_enemy_region: [0.180, 0.100, 0.820, 0.780]
+  loot_region: [0.250, 0.250, 0.750, 0.850]
+  health_red_hsv:
+    lower1: [0, 90, 45]
+    upper1: [12, 255, 255]
+    lower2: [168, 90, 45]
+    upper2: [179, 255, 255]
+  enemy_red_hsv:
+    lower1: [0, 120, 80]
+    upper1: [10, 255, 255]
+    lower2: [170, 120, 80]
+    upper2: [179, 255, 255]
+  thresholds:
+    low_health_ratio: 0.18
+    enemy_pixel_ratio: 0.002
+    inventory_brightness_ratio: 0.16
+    inventory_slot_edge_ratio: 0.055
+
+barbarian:
+  potion_key: "q"
+  potion_cooldown: 1.0
+  evade_key: "space"
+  move_interact_button: "left"
+  force_interact_key: "f"
+  retreat_health_ratio: 0.12
+  potion_health_ratio: 0.42
+  opener:
+    name: call_of_the_ancients
+    key: "1"
+  whirlwind:
+    toggle_key: "right"
+    restart_delay: 0.25
+  cooldown_skills:
+    - {name: challenging_shout, key: "2", cooldown: 25.0, priority: 90}
+    - {name: war_cry, key: "3", cooldown: 25.0, priority: 85}
+    - {name: rallying_cry, key: "4", cooldown: 25.0, priority: 80}
+    - {name: iron_skin, key: "5", cooldown: 14.0, priority: 95}
+  macro_hotkeys:
+    combat_rotation: "f6"
+
+loot:
+  enabled: true
+  force_interact_key: "f"
+  click_center: false
+  attempts: 3
+  settle_seconds: 0.35
+  enemy_clear_seconds: 2.0
+  enemy_clear_frames: 8
+  chest_loot_attempts: 12
+  loot_clear_frames: 3
+
+inventory:
+  enabled: true
+  open_key: "i"
+  rows: 4
+  columns: 10
+  full_ratio: 1.0
+  open_wait_seconds: 1.0
+  return_to_town_key: "t"
+  town_load_seconds: 8.0
+  stash_world_position: [0.50, 0.50]
+  move_to_stash_seconds: 4.0
+  stash_open_wait_seconds: 2.0
+  transfer_modifier: "shift"
+  transfer_button: "left"
+  transfer_interval: 0.08
+  slot_edge_ratio: 0.055
+  deposit_verify_seconds: 1.0
+  empty_ratio: 0.05
+  return_portal_position: [0.50, 0.50]
+  move_to_portal_seconds: 3.0
+  return_load_seconds: 8.0
+  close_stash_key: "esc"
+  conservative_mode: true
+
+route:
+  enabled: true               # Cursor-direction loop; replace with minimap routing later.
+  pulse_seconds: 1.2
+  points:
+    - [0.62, 0.48]
+    - [0.62, 0.62]
+    - [0.50, 0.68]
+    - [0.38, 0.62]
+    - [0.38, 0.48]
+    - [0.50, 0.36]
+
+bosses:
+  summon_mode: hotkey
+  enabled:
+    - butcher

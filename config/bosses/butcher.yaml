@@ -1,0 +1,30 @@
+id: butcher
+display_name: "The Butcher"
+match:
+  names: ["The Butcher", "屠夫"]
+summon:
+  # Press F7 while standing near the altar/device. The assistant stops
+  # Whirlwind, clicks this normalized screen position, then waits for a target.
+  device_position: [0.50, 0.52]
+  click_button: "left"
+  force_interact_key: "f"
+  move_to_device_seconds: 2.0
+  post_interact_wait_seconds: 1.5
+  room_corner_position: [0.18, 0.20]
+  move_to_corner_seconds: 2.5
+  corner_wait_seconds: 3.0
+  wait_for_boss_seconds: 12.0
+behavior:
+  preferred_distance: melee
+  potion_health_ratio: 0.52
+  retreat_health_ratio: 0.10
+  max_fight_seconds: 240
+  evade_every_seconds: 4.5
+  combat_rotation: default
+loot:
+  chest_position: [0.50, 0.52]
+  move_to_chest_seconds: 2.0
+  force_interact_key: "f"
+  chest_open_wait_seconds: 1.5
+  attempts: 5
+  settle_seconds: 0.6
